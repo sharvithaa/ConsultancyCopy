@@ -7,8 +7,11 @@ import Login from "./Login";
 import Contact from "./Contact";
 import {Link} from 'react-router-dom'
 import Footer from "./Footer";
+import AddProduct from "./Addproduct";
+import UpdateProduct from "./Updateproduct";
 
 const Home=()=>{
+    
     return(
         <div>
             <Header/>

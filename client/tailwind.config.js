@@ -7,6 +7,7 @@ module.exports = {
       extend: {
         colors: {
           customColor: '#FF725E', // Use your desired hex color code
+          
         },
       },
     },

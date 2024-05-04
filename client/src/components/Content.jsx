@@ -7,7 +7,7 @@ const Content = () => {
       <div className="w-full order-2 md:order-1 md:w-1/2 mt-12 md:mt-32">
         <div className="space-y-12">
           <h2 className="font-bold text-4xl">Hello!Come and improve your home experience with us..</h2>
-        <p className="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, enim aut, veritatis optio deserunt laborum reprehenderit quod voluptatum odit dignissimos fugit laboriosam labore minus laudantium nemo. Commodi sunt minima est!</p>
+        <p className="text-xl">With our unwavering dedication to quality and customer satisfaction, Wizaard Systems continues to expand its business and uphold its reputation as a trusted provider of innovative solutions. Join us in experiencing the excellence that defines Wizaard Systems.</p>
       </div>
       </div>
       <div className="order-1 w-full md:w-1/2">
