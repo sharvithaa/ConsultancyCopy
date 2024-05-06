@@ -3,13 +3,13 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import signup from '../assets/Sign up.gif';
 
-const Signup = () => {
+const Signup = ({ onClose }) => { // Accept onClose as a prop
   const navigate = useNavigate();
   const [userData, setUserData] = useState({
     username: "",
     email: "",
     password: "",
-    isadmin:false
+    isadmin: false
   });
 
   const [errorMessage, setErrorMessage] = useState(""); // State to hold error message
@@ -20,9 +20,6 @@ const Signup = () => {
     const newValue = name === "isadmin" ? checked : value;
     setUserData({ ...userData, [name]: newValue });
   };
-  
-  
-  
 
   const handleRegister = async (event) => {
     event.preventDefault(); // Prevent default form submission behavior
@@ -31,6 +28,7 @@ const Signup = () => {
       const response = await axios.post("http://localhost:5000/api/users/signup", userData);
       console.log("Signup successful:", response.data);
       // Assuming the response contains token, userId, and isAdmin
+      onClose(); // Close the popup
       navigate("/login"); // Redirect to home page after successful registration
     } catch (error) {
       console.error("Error registering user:", error);
@@ -50,6 +48,10 @@ const Signup = () => {
     }
   };
 
+  const handleClosePopup = () => {
+    // Call onClose function to close the popup
+    onClose();
+  };
 
   return (
     <>
@@ -68,31 +70,35 @@ const Signup = () => {
               <label className='my-1.5'>
                 <input type="text" name="username" placeholder='Username' onChange={handleInputChange} className='bg-transparent w-full text-sm px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-indigo-500 to-blue-500' />
               </label>
+              <div className="my-1.5"></div>
               {/* Email input */}
               <label className='my-1.5'>
-                <input type="email" name="email" placeholder='Email'  onChange={handleInputChange} className='bg-transparent w-full text-sm px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-indigo-500 to-blue-500' />
+                <input type="email" name="email" placeholder='Email' onChange={handleInputChange} className='bg-transparent w-full text-sm px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-indigo-500 to-blue-500' />
               </label>
+              <div className="my-1.5"></div>
               {/* Password input */}
               <label className='my-1.5'>
-                <input type="password" name="password" placeholder='Password'  onChange={handleInputChange} className='bg-transparent w-full text-sm px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-indigo-500 to-blue-500' />
+                <input type="password" name="password" placeholder='Password' onChange={handleInputChange} className='bg-transparent w-full text-sm px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-indigo-500 to-blue-500' />
               </label>
+              <div className="my-1.5"></div>
               {/* Confirm password input */}
               <label className='my-1.5'>
                 <input type="password" name="confirmPassword" placeholder='Confirm password' onChange={handleInputChange} className='bg-transparent w-full text-sm px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-indigo-500 to-blue-500' />
               </label>
               <label className='my-1.5'>
-              <input
-  type="checkbox"
-  name="isadmin"
-  checked={userData.isadmin}
-  onChange={handleInputChange}
-  className='bg-transparent w-full text-sm px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-indigo-500 to-blue-500'
-/>
-              Admin?
+                <input
+                  type="checkbox"
+                  name="isadmin"
+                  checked={userData.isadmin}
+                  onChange={handleInputChange}
+                  className='bg-transparent w-full text-sm px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-indigo-500 to-blue-500'
+                />
+                Admin?
               </label>
               {/* Submit button */}
               <div className="btn mt-2 flex justify-center">
                 <button type="submit" className='text-white hover:text-gray-500 p-3 rounded-lg tracking-wide font-semibold cursor-pointer transition ease-in duration-500 bg-customColor'>Signup</button>
+                <button type="button" onClick={handleClosePopup} className='text-white hover:text-gray-500 p-3 rounded-lg tracking-wide font-semibold cursor-pointer transition ease-in duration-500 bg-red-500 ml-4'>Close</button>
               </div>
             </form>
             {/* Login link */}

@@ -9,6 +9,7 @@ import UpdateProductPage from "./components/Updateproduct"
 import DeleteProductPage from "./components/Deleteproduct"
 import AuthPage from "./components/authPage";
 import CartPage from "./components/cartPage";
+import Payment from "./components/Payment";
 
 import { AuthContext } from "./context/authContext";
 import { useState } from "react";
@@ -87,6 +88,14 @@ function App() {
           }
         />
         <Route
+          path="/payment"
+          element={
+            <RequiredAuth>
+              <Payment />
+            </RequiredAuth>
+          }
+        />
+        <Route
           path="/orders"
           element={
             <RequiredAuth>
@@ -95,6 +104,7 @@ function App() {
           }
         />
       </Routes>
+      
     </AuthContext.Provider>
   );
 }

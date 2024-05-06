@@ -100,10 +100,10 @@ const OrdersPage = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      {JSON.parse(order.items).map((item) => (
+                      {order.items.map((item) => (
                         <tr key={item._id}>
                           <td>{item.title}</td>
-                          <td>${item.price}</td>
+                          <td>Rs.{item.price}</td>
                           <td>{item.quantity}</td>
                           <td>{order.totalAmount}</td>
                         </tr>

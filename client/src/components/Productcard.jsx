@@ -45,14 +45,14 @@ const ProductCard = (props) => {
   const handleBuyNow = (product) => {
     // Add the product to the cart
     handleAddToCart(product);
-    // Redirect to the checkout page
+    // Redirect to the cart page
     navigate("/cart");
   };
 
   return (
-    <div className="max-w-xs mx-auto bg-white shadow-md rounded-xl overflow-hidden">
+    <div className="max-w-xs mx-auto bg-white shadow-md rounded-xl overflow-hidden mb-5">
       <img
-        className="w-full h-48 object-cover object-center"
+        className="w-auto h-48 object-cover object-center"
         src={product.images}
         alt="Product image"
       />

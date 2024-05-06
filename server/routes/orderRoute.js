@@ -16,7 +16,7 @@ router.post("/create", async (req, res) => {
     country: req.body.data.country,
     zipCode: req.body.data.zipCode,
     totalAmount: req.body.data.totalAmount,
-    items: JSON.stringify(req.body.data.items),
+    items: req.body.data.items,
     createdDate: req.body.data.createdDate,
   });
 

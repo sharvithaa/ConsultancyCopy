@@ -7,7 +7,7 @@ const About = () => {
       <div className="w-1/2">
         <h2 className="text-center text-3xl font-bold mb-5">About Us</h2>
         <h2 className="text-center text-3xl font-bold mb-5">Welcome to WizaardSystems</h2>
-        <p className="p-5 text-center text-justify bg-red-200 rounded-3xl shadow-xl">
+        <p className="p-5 text-center text-justify bg-customColor rounded-3xl shadow-xl">
         Established in 2000, Wizaard Systems has been dedicated to delivering supreme quality products to our valued customers. As a Sole Proprietorship entity headquartered in Gandhipuram, Coimbatore, Tamil Nadu, we take pride in our commitment to excellence.
         <p>
 At Wizaard Systems, we specialize in manufacturing a range of essential products including Water Pump Controllers, Water Level Controllers, Battery Desulfators, and Battery Life Enhancers. Our extensive product line is designed to meet the diverse needs of our clients, ensuring that they receive the solutions they require within the precise time span they expect.

@@ -1,6 +1,5 @@
 import React from "react";
 import circuit from "../assets/Printed circuit board.gif";
-import bg from '../assets/circle-scatter-haikei.png'
 const Content = () => {
   return (
     <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 flex flex-col md:flex-row">
