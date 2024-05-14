@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.25d91882.css",
+    "main.js": "/static/js/main.e42cf4e9.js",
+    "static/js/453.601c391c.chunk.js": "/static/js/453.601c391c.chunk.js",
+    "static/media/20943401.jpg": "/static/media/20943401.a5c13cc49ddad07ee624.jpg",
+    "static/media/Sign up.gif": "/static/media/Sign up.53823a5ea79acc6c0fa2.gif",
+    "static/media/Login.gif": "/static/media/Login.b666c9b56efbe7f6f847.gif",
+    "static/media/Printed circuit board.gif": "/static/media/Printed circuit board.242f0cadcfe28515e009.gif",
+    "static/media/logo.png": "/static/media/logo.efa246e96f538ca03a6b.png",
+    "static/media/emptycart.png": "/static/media/emptycart.f04d7ce3c799d73fcd06.png",
+    "index.html": "/index.html",
+    "main.25d91882.css.map": "/static/css/main.25d91882.css.map",
+    "main.e42cf4e9.js.map": "/static/js/main.e42cf4e9.js.map",
+    "453.601c391c.chunk.js.map": "/static/js/453.601c391c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.25d91882.css",
+    "static/js/main.e42cf4e9.js"
+  ]
+}

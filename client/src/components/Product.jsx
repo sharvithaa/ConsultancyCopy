@@ -11,7 +11,7 @@ const Product = () => {
 
   const getProduct = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/product/read");
+      const response = await axios.get("https://consultancycopy-be.onrender.com/api/product/read");
       setProductList(response.data);
       console.log(response.data);
     } catch (e) {

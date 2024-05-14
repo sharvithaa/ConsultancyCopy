@@ -15,7 +15,7 @@ const DeleteProduct = () => {
 
   const getProduct = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/product/get/${productId}`);
+      const response = await axios.get(`https://consultancycopy-be.onrender.com/api/product/get/${productId}`);
       console.log(response.data);
       setProductData(response.data);
       setError(null); // Clear any previous error

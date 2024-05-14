@@ -3,6 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import login from '../assets/Login.gif';
 
+
 const Login = ({ onClose }) => { // Accept onClose as a prop
   const navigate = useNavigate();
   const [loginData, setLoginData] = useState({
@@ -31,7 +32,7 @@ const Login = ({ onClose }) => { // Accept onClose as a prop
     event.preventDefault();
     
     try {
-      const response = await axios.post("http://localhost:5000/api/users/login", loginData);
+      const response = await axios.post("https://consultancycopy-be.onrender.com/api/users/login", loginData);
       const responseData = response.data;
       localStorage.setItem("token", responseData.token);
       navigate(responseData.isAdmin ? "/admin" : "/");
@@ -79,7 +80,7 @@ const Login = ({ onClose }) => { // Accept onClose as a prop
           </form>
           <p className='text-black hover:underline hover:text-white-500 mt-1.5 text-center'>
             Don't have an account? <Link to="/signup" className='text-black hover:underline hover:text-white-500'>Signup</Link>
-          </p>{isSignupOpen && <Signup onClose={closeSignupPopup} />}
+          </p>
           <div className="footer rounded-[10px] grid grid-cols-2 mt-2">
             <a href="" className='text-black flex justify-start hover:underline hover:text-white-500'>Support</a>
             <a href="" className='text-black flex justify-end hover:underline hover:text-white-500'>Customer Care</a>

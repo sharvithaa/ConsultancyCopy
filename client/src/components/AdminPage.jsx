@@ -18,7 +18,7 @@ const AdminPage = () => {
   useEffect(() => {
     const fetchUserCount = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/admin/admin");
+        const response = await axios.get("https://consultancycopy-be.onrender.com/api/admin/admin");
         setUserCount(response.data.userCount);
         setproductCount(response.data.productCount);
         setorderCount(response.data.orderCount);
@@ -50,7 +50,7 @@ const AdminPage = () => {
 
   const getProduct = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/product");
+      const response = await axios.get("https://consultancycopy-be.onrender.com/api/product");
       setProductList(response.data);
       setOriginalData(response.data);
     } catch (e) {

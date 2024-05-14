@@ -23,7 +23,7 @@ const ProductCard = (props) => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await axios.delete("http://localhost:5000/api/product/delete/" + id);
+      const response = await axios.delete("https://consultancycopy-be.onrender.com/api/product/delete/" + id);
       console.log(response.data);
       if (response.data === "Product deleted!") {
         // Call the getProduct function passed as a prop from the parent component
