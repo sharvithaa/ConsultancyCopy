@@ -11,7 +11,7 @@ import order from "./routes/orderRoute.js";
 import chart from "./routes/chart.js";
 
 
-connect("mongodb://127.0.0.1:27017/Wizaardsystems") 
+connect("mongodb+srv://dharmalingamrandd:iUaskwuW2AeTJvaD@cluster0.1nhh0uw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0") 
   .then(() => console.log("Connected to MongoDB..."))
   .catch((err) => console.error("Could not connect to MongoDB...",err));
 
