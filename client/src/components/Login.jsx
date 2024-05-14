@@ -3,7 +3,6 @@ import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import login from '../assets/Login.gif';
 
-
 const Login = ({ onClose }) => { // Accept onClose as a prop
   const navigate = useNavigate();
   const [loginData, setLoginData] = useState({
@@ -32,7 +31,7 @@ const Login = ({ onClose }) => { // Accept onClose as a prop
     event.preventDefault();
     
     try {
-      const response = await axios.post("https://consultancycopy-be.onrender.com/api/users/login", loginData);
+      const response = await axios.post("http://localhost:5000/api/users/login", loginData);
       const responseData = response.data;
       localStorage.setItem("token", responseData.token);
       navigate(responseData.isAdmin ? "/admin" : "/");

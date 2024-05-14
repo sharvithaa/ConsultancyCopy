@@ -21,7 +21,7 @@ const AddProduct = () => {
     const handleSave = async () => {
         console.log(productData);
         try {
-          const response = await axios.post("https://consultancycopy-be.onrender.com/api/product/create", productData);
+          const response = await axios.post("http://localhost:5000/api/product/create", productData);
           if (response.status === 201) {
             navigate("/");
           }

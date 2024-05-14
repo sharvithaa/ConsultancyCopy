@@ -12,7 +12,7 @@ const OrdersPage = () => {
   const getOrders = async () => {
     const userId = localStorage.getItem("userId");
     try {
-      const response = await axios.get("https://consultancycopy-be.onrender.com/api/order/" + userId);
+      const response = await axios.get("http://localhost:5000/api/order/" + userId);
       setOrders(response.data);
       console.log(response.data);
     } catch (e) {

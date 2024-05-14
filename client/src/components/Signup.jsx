@@ -25,7 +25,7 @@ const Signup = ({ onClose }) => { // Accept onClose as a prop
     event.preventDefault(); // Prevent default form submission behavior
 
     try {
-      const response = await axios.post("https://consultancycopy-be.onrender.com/api/users/signup", userData);
+      const response = await axios.post("http://localhost:5000/api/users/signup", userData);
       console.log("Signup successful:", response.data);
       // Assuming the response contains token, userId, and isAdmin
       onClose(); // Close the popup

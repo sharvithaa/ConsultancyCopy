@@ -14,7 +14,7 @@ const UpdateProduct = () => {
 
   const getProduct = async () => {
     try {
-      const response = await axios.get("https://consultancycopy-be.onrender.com/get/" + id);
+      const response = await axios.get("http://localhost:5000/get/" + id);
       console.log(response.data);
       setProductData(response.data);
     } catch (e) {
@@ -30,7 +30,7 @@ const UpdateProduct = () => {
 
   const handleUpdate = async () => {
     try {
-      const response = await axios.put("https://consultancycopy-be.onrender.com/update/" + id, {
+      const response = await axios.put("http://localhost:5000/update/" + id, {
         data: productData,
       });
       if (response.data === "Product updated successfully!") {
