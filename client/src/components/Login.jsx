@@ -9,6 +9,16 @@ const Login = ({ onClose }) => { // Accept onClose as a prop
     email: "",
     password: "",
   });
+  const [isSignupOpen, setIsSignupOpen] = useState(false);
+
+  const openSignupPopup = () => {
+    setIsSignupOpen(true);
+  };
+
+  const closeSignupPopup = () => {
+    setIsSignupOpen(false);
+  };
+
 
   const [error, setError] = useState("");
 
@@ -69,7 +79,7 @@ const Login = ({ onClose }) => { // Accept onClose as a prop
           </form>
           <p className='text-black hover:underline hover:text-white-500 mt-1.5 text-center'>
             Don't have an account? <Link to="/signup" className='text-black hover:underline hover:text-white-500'>Signup</Link>
-          </p>
+          </p>{isSignupOpen && <Signup onClose={closeSignupPopup} />}
           <div className="footer rounded-[10px] grid grid-cols-2 mt-2">
             <a href="" className='text-black flex justify-start hover:underline hover:text-white-500'>Support</a>
             <a href="" className='text-black flex justify-end hover:underline hover:text-white-500'>Customer Care</a>
